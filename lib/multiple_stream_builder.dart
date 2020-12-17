@@ -1,7 +1,7 @@
 library multiple_stream_builder;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/stream_builder_2.dart';
+export 'src/stream_builder_3.dart';
+export 'src/stream_builder_4.dart';
+export 'src/stream_builder_5.dart';
+export 'src/stream_builder_6.dart';
