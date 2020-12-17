@@ -1,8 +1,8 @@
 name: multiple_stream_builder
-description: A new Flutter package project.
+description: Widgets for avoiding nested StreamBuilder
 version: 0.0.1
 author:
-homepage:
+homepage: https://github.com/glitchedmob/flutter_multiple_stream_builder
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
