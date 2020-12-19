@@ -3,9 +3,7 @@ import 'package:tuple/tuple.dart';
 
 typedef AsyncWidgetBuilder3<T1, T2, T3> = Widget Function(
   BuildContext context,
-  AsyncSnapshot<T1> snapshot1,
-  AsyncSnapshot<T2> snapshot2,
-  AsyncSnapshot<T3> snapshot3,
+  Tuple3<AsyncSnapshot<T1>, AsyncSnapshot<T2>, AsyncSnapshot<T3>> snapshots,
 );
 
 class StreamBuilder3<T1, T2, T3> extends StatelessWidget {
@@ -37,9 +35,7 @@ class StreamBuilder3<T1, T2, T3> extends StatelessWidget {
               builder: (context, snapshot3) {
                 return builder(
                   context,
-                  snapshot1,
-                  snapshot2,
-                  snapshot3,
+                  Tuple3(snapshot1, snapshot2, snapshot3),
                 );
               },
             );

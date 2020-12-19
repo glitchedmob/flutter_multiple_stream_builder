@@ -3,11 +3,9 @@ import 'package:tuple/tuple.dart';
 
 typedef AsyncWidgetBuilder5<T1, T2, T3, T4, T5> = Widget Function(
   BuildContext context,
-  AsyncSnapshot<T1> snapshot1,
-  AsyncSnapshot<T2> snapshot2,
-  AsyncSnapshot<T3> snapshot3,
-  AsyncSnapshot<T4> snapshot4,
-  AsyncSnapshot<T5> snapshot5,
+  Tuple5<AsyncSnapshot<T1>, AsyncSnapshot<T2>, AsyncSnapshot<T3>,
+          AsyncSnapshot<T4>, AsyncSnapshot<T5>>
+      snapshots,
 );
 
 class StreamBuilder5<T1, T2, T3, T4, T5> extends StatelessWidget {
@@ -48,11 +46,13 @@ class StreamBuilder5<T1, T2, T3, T4, T5> extends StatelessWidget {
                       builder: (context, snapshot5) {
                         return builder(
                           context,
-                          snapshot1,
-                          snapshot2,
-                          snapshot3,
-                          snapshot4,
-                          snapshot5,
+                          Tuple5(
+                            snapshot1,
+                            snapshot2,
+                            snapshot3,
+                            snapshot4,
+                            snapshot5,
+                          ),
                         );
                       },
                     );
