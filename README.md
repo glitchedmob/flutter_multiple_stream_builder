@@ -9,7 +9,7 @@ var stream1 = Stream<int>.periodic(Duration(seconds: 1));
 var stream2 = Stream<int>.periodic(Duration(seconds: 2));
 var stream3 = Stream<int>.periodic(Duration(seconds: 3));
 
-// Instead of writing out nested stream builders
+// Instead of writing out nested StreamBuilders
 Widget build(BuildContext context) {
   return StreamBuilder<int>(
     stream: stream1,
