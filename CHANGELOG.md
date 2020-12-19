@@ -1,3 +1,7 @@
+## 1.0.0+1 - 2020/12/18
+
+- Documentation updates
+
 ## 1.0.0 - 2020/12/18
 
 - Update streams argument to require a tuple instead of a list
