@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
-
-import 'package:multiple_stream_builder/src/utils.dart';
+import 'package:tuple/tuple.dart';
 
 typedef AsyncWidgetBuilder5<T1, T2, T3, T4, T5> = Widget Function(
   BuildContext context,
@@ -12,40 +11,40 @@ typedef AsyncWidgetBuilder5<T1, T2, T3, T4, T5> = Widget Function(
 );
 
 class StreamBuilder5<T1, T2, T3, T4, T5> extends StatelessWidget {
-  final List<Stream> streams;
+  final Tuple5<Stream<T1>, Stream<T2>, Stream<T3>, Stream<T4>, Stream<T5>>
+      streams;
   final AsyncWidgetBuilder5<T1, T2, T3, T4, T5> builder;
-  final List initialData;
+  final Tuple5<T1, T2, T3, T4, T5> initialData;
 
   const StreamBuilder5({
     Key key,
     this.initialData,
     @required this.streams,
     @required this.builder,
-  })  : assert(initialData == null ? true : initialData.length >= 5),
-        assert(streams.length == 5),
+  })  : assert(streams != null),
         assert(builder != null);
 
   @override
   Widget build(BuildContext _) {
     return StreamBuilder<T1>(
-      stream: streams[0],
-      initialData: initialData?.tryGet(0) as T1,
+      stream: streams.item1,
+      initialData: initialData?.item1,
       builder: (_, snapshot1) {
         return StreamBuilder<T2>(
-          stream: streams[1],
-          initialData: initialData?.tryGet(1) as T2,
+          stream: streams.item2,
+          initialData: initialData?.item2,
           builder: (_, snapshot2) {
             return StreamBuilder<T3>(
-              stream: streams[2],
-              initialData: initialData?.tryGet(2) as T3,
+              stream: streams.item3,
+              initialData: initialData?.item3,
               builder: (_, snapshot3) {
                 return StreamBuilder<T4>(
-                  stream: streams[3],
-                  initialData: initialData?.tryGet(3) as T4,
+                  stream: streams.item4,
+                  initialData: initialData?.item4,
                   builder: (_, snapshot4) {
                     return StreamBuilder<T5>(
-                      stream: streams[4],
-                      initialData: initialData?.tryGet(4) as T5,
+                      stream: streams.item5,
+                      initialData: initialData?.item5,
                       builder: (context, snapshot5) {
                         return builder(
                           context,

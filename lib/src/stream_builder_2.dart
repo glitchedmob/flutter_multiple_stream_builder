@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
-
-import 'package:multiple_stream_builder/src/utils.dart';
+import 'package:tuple/tuple.dart';
 
 typedef AsyncWidgetBuilder2<T1, T2> = Widget Function(
   BuildContext context,
@@ -9,28 +8,27 @@ typedef AsyncWidgetBuilder2<T1, T2> = Widget Function(
 );
 
 class StreamBuilder2<T1, T2> extends StatelessWidget {
-  final List<Stream> streams;
+  final Tuple2<Stream<T1>, Stream<T2>> streams;
   final AsyncWidgetBuilder2<T1, T2> builder;
-  final List initialData;
+  final Tuple2<T1, T2> initialData;
 
   const StreamBuilder2({
     Key key,
     this.initialData,
     @required this.streams,
     @required this.builder,
-  })  : assert(initialData == null ? true : initialData.length >= 2),
-        assert(streams.length == 2),
+  })  : assert(streams != null),
         assert(builder != null);
 
   @override
   Widget build(BuildContext _) {
     return StreamBuilder<T1>(
-      stream: streams[0],
-      initialData: initialData?.tryGet(0) as T1,
+      stream: streams.item1,
+      initialData: initialData?.item1,
       builder: (_, snapshot1) {
         return StreamBuilder<T2>(
-          stream: streams[1],
-          initialData: initialData?.tryGet(1) as T2,
+          stream: streams.item2,
+          initialData: initialData?.item2,
           builder: (context, snapshot2) {
             return builder(
               context,
