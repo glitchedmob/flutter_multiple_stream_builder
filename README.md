@@ -14,9 +14,9 @@ dependencies:
 ## Usage example
 
 ```dart
-var stream1 = Stream<int>.periodic(Duration(seconds: 1));
-var stream2 = Stream<int>.periodic(Duration(seconds: 2));
-var stream3 = Stream<int>.periodic(Duration(seconds: 3));
+var stream1 = Stream<int>.periodic(Duration(seconds: 1), (x) => x);
+var stream2 = Stream<int>.periodic(Duration(seconds: 2), (x) => x);
+var stream3 = Stream<int>.periodic(Duration(seconds: 3), (x) => x);
 
 // Instead of writing out nested StreamBuilders
 Widget build(BuildContext context) {
