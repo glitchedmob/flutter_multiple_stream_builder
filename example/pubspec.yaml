@@ -9,7 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tuple: ^1.0.3
   multiple_stream_builder:
     path: ../
 

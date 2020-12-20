@@ -3,13 +3,15 @@
 Flutter widgets to replace multiple nested StreamBuilder widgets
 
 ## Installing
-To add use this package in your Flutter project you'll need to add 2 packages to your `pubspec.yaml`.
-The `multiple_stream_builder` package itself as well as the `Tuple` package from Google
+To add use this package in your Flutter project add this to your `pubspec.yml`
 ```yml
 dependencies:
   multiple_stream_builder: ^1.0.0
-  tuple: ^1.0.3
 ```
+**Note:** this package depends on the [tuple](https://pub.dev/packages/tuple) package from pub.dev.
+The types from the tuple package are used to pass in arguments to the widgets in this package.
+However, this package exports the types from the tuple package, so you don't have to install it directly. 
+Installing the tuple package and using its types directly shouldn't cause any issues though.
 
 ## Usage example
 
