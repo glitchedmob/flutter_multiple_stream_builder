@@ -1,3 +1,8 @@
+## 1.1.0 - 2020/12/20
+
+- Update package exports to include tuple package
+- Fix documentation bugs
+
 ## 1.0.0+4 - 2020/12/19
 
 - Update package description
@@ -24,4 +29,4 @@
 
 ## 0.0.1 - 2020/12/17
 
-* initial release.
+- initial release.
