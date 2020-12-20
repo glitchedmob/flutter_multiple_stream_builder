@@ -8,7 +8,7 @@ typedef AsyncWidgetBuilder5<T1, T2, T3, T4, T5> = Widget Function(
       snapshots,
 );
 
-/// Wraps the normal [StreamBuilder] widget to allow 5 [Stream[s in
+/// Wraps the normal [StreamBuilder] widget to allow 5 streams in
 /// in the form of a [Tuple5]. Can also accept multiple values for
 /// [initialData] using a [Tuple5].
 class StreamBuilder5<T1, T2, T3, T4, T5> extends StatelessWidget {

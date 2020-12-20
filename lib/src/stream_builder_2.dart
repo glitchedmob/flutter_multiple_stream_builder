@@ -6,7 +6,7 @@ typedef AsyncWidgetBuilder2<T1, T2> = Widget Function(
   Tuple2<AsyncSnapshot<T1>, AsyncSnapshot<T2>> snapshots,
 );
 
-/// Wraps the normal [StreamBuilder] widget to allow 2 [Stream[s in
+/// Wraps the normal [StreamBuilder] widget to allow 2 streams in
 /// in the form of a [Tuple2]. Can also accept multiple values for
 /// [initialData] using a [Tuple2].
 class StreamBuilder2<T1, T2> extends StatelessWidget {
