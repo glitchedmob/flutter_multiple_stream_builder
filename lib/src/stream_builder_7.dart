@@ -14,6 +14,9 @@ typedef AsyncWidgetBuilder7<T1, T2, T3, T4, T5, T6, T7> = Widget Function(
       snapshots,
 );
 
+/// Wraps the normal [StreamBuilder] widget to allow 7 [Stream[s in
+/// in the form of a [Tuple7]. Can also accept multiple values for
+/// [initialData] using a [Tuple7].
 class StreamBuilder7<T1, T2, T3, T4, T5, T6, T7> extends StatelessWidget {
   final Tuple7<Stream<T1>, Stream<T2>, Stream<T3>, Stream<T4>, Stream<T5>,
       Stream<T6>, Stream<T7>> streams;

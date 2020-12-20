@@ -6,6 +6,9 @@ typedef AsyncWidgetBuilder3<T1, T2, T3> = Widget Function(
   Tuple3<AsyncSnapshot<T1>, AsyncSnapshot<T2>, AsyncSnapshot<T3>> snapshots,
 );
 
+/// Wraps the normal [StreamBuilder] widget to allow 3 [Stream[s in
+/// in the form of a [Tuple3]. Can also accept multiple values for
+/// [initialData] using a [Tuple3].
 class StreamBuilder3<T1, T2, T3> extends StatelessWidget {
   final Tuple3<Stream<T1>, Stream<T2>, Stream<T3>> streams;
   final AsyncWidgetBuilder3<T1, T2, T3> builder;
