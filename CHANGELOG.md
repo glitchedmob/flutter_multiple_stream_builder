@@ -1,3 +1,8 @@
+## 1.0.0+2 - 2020/19/20
+
+- Add example app
+- More documentation updates
+
 ## 1.0.0+1 - 2020/12/18
 
 - Documentation updates
