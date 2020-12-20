@@ -1,6 +1,6 @@
 name: multiple_stream_builder
 description: Widgets for avoiding nested StreamBuilder
-version: 1.0.0+2
+version: 1.0.0+3
 homepage: https://github.com/glitchedmob/flutter_multiple_stream_builder
 
 environment:

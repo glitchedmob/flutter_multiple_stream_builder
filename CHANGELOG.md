@@ -1,4 +1,8 @@
-## 1.0.0+2 - 2020/19/20
+## 1.0.0+3 - 2020/12/19
+
+- Fix issue with changelog
+
+## 1.0.0+2 - 2020/12/19
 
 - Add example app
 - More documentation updates
