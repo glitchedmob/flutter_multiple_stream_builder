@@ -1,6 +1,6 @@
 # multiple_stream_builder
 
-Flutter widgets for avoiding nested StreamBuilder
+Flutter widgets to replace multiple nested StreamBuilder widgets
 
 ## Installing
 To add use this package in your Flutter project you'll need to add 2 packages to your `pubspec.yaml`.
