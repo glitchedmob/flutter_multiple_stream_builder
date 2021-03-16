@@ -58,6 +58,8 @@ class StreamBuilder7<T1, T2, T3, T4, T5, T6, T7> extends StatelessWidget {
                           initialData: initialData?.item6,
                           builder: (_, snapshot6) {
                             return StreamBuilder<T7>(
+                              stream: streams.item7,
+                              initialData: initialData?.item7,
                               builder: (context, snapshot7) {
                                 return builder(
                                   context,
