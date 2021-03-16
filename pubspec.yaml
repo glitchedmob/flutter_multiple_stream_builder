@@ -1,6 +1,6 @@
 name: multiple_stream_builder
 description: Flutter widgets to replace multiple nested StreamBuilder widgets
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/glitchedmob/flutter_multiple_stream_builder
 
 environment:

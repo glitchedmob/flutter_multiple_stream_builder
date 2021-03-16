@@ -1,3 +1,7 @@
+## 1.1.1 - 2021/03/16
+
+- Fix issues with StreamBuilder7
+
 ## 1.1.0 - 2020/12/20
 
 - Update package exports to include tuple package
