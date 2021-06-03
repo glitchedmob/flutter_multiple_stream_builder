@@ -1,3 +1,7 @@
+## 2.0.0 - 2021/06/03
+
+- Migrate to null safety
+
 ## 1.1.1 - 2021/03/16
 
 - Fix issues with StreamBuilder7
