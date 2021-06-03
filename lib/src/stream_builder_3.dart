@@ -10,17 +10,16 @@ typedef AsyncWidgetBuilder3<T1, T2, T3> = Widget Function(
 /// in the form of a [Tuple3]. Can also accept multiple values for
 /// [initialData] using a [Tuple3].
 class StreamBuilder3<T1, T2, T3> extends StatelessWidget {
-  final Tuple3<Stream<T1>, Stream<T2>, Stream<T3>> streams;
+  final Tuple3<Stream<T1>?, Stream<T2>?, Stream<T3>?> streams;
   final AsyncWidgetBuilder3<T1, T2, T3> builder;
-  final Tuple3<T1, T2, T3> initialData;
+  final Tuple3<T1, T2, T3>? initialData;
 
   const StreamBuilder3({
-    Key key,
+    Key? key,
     this.initialData,
-    @required this.streams,
-    @required this.builder,
-  })  : assert(streams != null),
-        assert(builder != null);
+    required this.streams,
+    required this.builder,
+  });
 
   @override
   Widget build(BuildContext _) {
