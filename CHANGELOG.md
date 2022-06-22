@@ -1,3 +1,8 @@
+## 3.0.1 - 2022/06/22
+
+- Add better dartdoc comments to new types
+- Add example file
+
 ## 3.0.0 - 2022/06/21
 
 - **Breaking Change**: Remove dependency on `tuple` and use custom types instead
