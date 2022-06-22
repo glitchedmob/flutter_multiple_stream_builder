@@ -1,6 +1,6 @@
 name: multiple_stream_builder
 description: Flutter widgets to replace multiple nested StreamBuilder widgets
-version: 2.0.0
+version: 3.0.0
 homepage: https://github.com/glitchedmob/flutter_multiple_stream_builder
 
 environment:
@@ -10,9 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tuple: ^2.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
