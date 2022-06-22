@@ -3,37 +3,37 @@ import 'package:multiple_stream_builder/src/multiple_stream_builder.dart';
 
 /// Wrapper for 11 [Stream]s. Intended to be used with [StreamBuilder11]
 class StreamTuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
-  // returns the first stream of the tuple
+  /// returns the first stream of the tuple
   final Stream<T1> stream1;
 
-  // returns the second stream of the tuple
+  /// returns the second stream of the tuple
   final Stream<T2> stream2;
 
-  // returns the third stream of the tuple
+  /// returns the third stream of the tuple
   final Stream<T3> stream3;
 
-  // returns the fourth stream of the tuple
+  /// returns the fourth stream of the tuple
   final Stream<T4> stream4;
 
-  // returns the fifth stream of the tuple
+  /// returns the fifth stream of the tuple
   final Stream<T5> stream5;
 
-  // returns the sixth stream of the tuple
+  /// returns the sixth stream of the tuple
   final Stream<T6> stream6;
 
-  // returns the seventh stream of the tuple
+  /// returns the seventh stream of the tuple
   final Stream<T7> stream7;
 
-  // returns the eighth stream of the tuple
+  /// returns the eighth stream of the tuple
   final Stream<T8> stream8;
 
-  // returns the ninth stream of the tuple
+  /// returns the ninth stream of the tuple
   final Stream<T9> stream9;
 
-  /// returns the tenth stream of the tuple
+  //// returns the tenth stream of the tuple
   final Stream<T10> stream10;
 
-  /// returns the eleventh stream of the tuple
+  //// returns the eleventh stream of the tuple
   final Stream<T11> stream11;
 
   StreamTuple11(
@@ -53,37 +53,37 @@ class StreamTuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
 
 /// Wrapper for 11 [AsyncSnapshot]s Intended to be used with [StreamBuilder11]
 class SnapshotTuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
-  // returns the first snapshot of the tuple
+  /// returns the first snapshot of the tuple
   final AsyncSnapshot<T1> snapshot1;
 
-  // returns the second snapshot of the tuple
+  /// returns the second snapshot of the tuple
   final AsyncSnapshot<T2> snapshot2;
 
-  // returns the third snapshot of the tuple
+  /// returns the third snapshot of the tuple
   final AsyncSnapshot<T3> snapshot3;
 
-  // returns the fourth snapshot of the tuple
+  /// returns the fourth snapshot of the tuple
   final AsyncSnapshot<T4> snapshot4;
 
-  // returns the fifth snapshot of the tuple
+  /// returns the fifth snapshot of the tuple
   final AsyncSnapshot<T5> snapshot5;
 
-  // returns the sixth snapshot of the tuple
+  /// returns the sixth snapshot of the tuple
   final AsyncSnapshot<T6> snapshot6;
 
-  // returns the seventh snapshot of the tuple
+  /// returns the seventh snapshot of the tuple
   final AsyncSnapshot<T7> snapshot7;
 
-  // returns the eighth snapshot of the tuple
+  /// returns the eighth snapshot of the tuple
   final AsyncSnapshot<T8> snapshot8;
 
-  // returns the ninth snapshot of the tuple
+  /// returns the ninth snapshot of the tuple
   final AsyncSnapshot<T9> snapshot9;
 
-  /// returns the tenth snapshot of the tuple
+  //// returns the tenth snapshot of the tuple
   final AsyncSnapshot<T10> snapshot10;
 
-  /// returns the eleventh snapshot of the tuple
+  //// returns the eleventh snapshot of the tuple
   final AsyncSnapshot<T11> snapshot11;
 
   SnapshotTuple11(
@@ -103,37 +103,37 @@ class SnapshotTuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
 
 /// Wrapper for 11 `initialData` values for [StreamBuilder11]
 class InitialDataTuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
-  // returns the first item of the tuple
+  /// returns the first item of the tuple
   final T1? data1;
 
-  // returns the second item of the tuple
+  /// returns the second item of the tuple
   final T2? data2;
 
-  // returns the third item of the tuple
+  /// returns the third item of the tuple
   final T3? data3;
 
-  // returns the fourth item of the tuple
+  /// returns the fourth item of the tuple
   final T4? data4;
 
-  // returns the fifth item of the tuple
+  /// returns the fifth item of the tuple
   final T5? data5;
 
-  // returns the sixth item of the tuple
+  /// returns the sixth item of the tuple
   final T6? data6;
 
-  // returns the seventh item of the tuple
+  /// returns the seventh item of the tuple
   final T7? data7;
 
-  // returns the eighth item of the tuple
+  /// returns the eighth item of the tuple
   final T8? data8;
 
-  // returns the ninth item of the tuple
+  /// returns the ninth item of the tuple
   final T9? data9;
 
-  /// returns the tenth item of the tuple
+  //// returns the tenth item of the tuple
   final T10? data10;
 
-  /// returns the eleventh item of the tuple
+  //// returns the eleventh item of the tuple
   final T11? data11;
 
   InitialDataTuple11([
@@ -163,9 +163,17 @@ typedef AsyncWidgetBuilder11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
 /// [initialData] using a [InitialDataTuple11].
 class StreamBuilder11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
     extends StatelessWidget {
+  /// Collection of streams for this widget to listen to.
+  /// New data in any stream triggers [builder] to rerun
   final StreamTuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> streams;
+
+  /// A builder that gets passed multiple snapshots.
+  /// see [StreamBuilder.builder] for more info
   final AsyncWidgetBuilder11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
       builder;
+
+  /// Initial data for when the [streams] don't have any.
+  /// see [StreamBuilder.initialData] for more info
   final InitialDataTuple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>?
       initialData;
 

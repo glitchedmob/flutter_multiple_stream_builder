@@ -3,10 +3,10 @@ import 'package:multiple_stream_builder/src/multiple_stream_builder.dart';
 
 /// Wrapper for 2 [Stream]s. Intended to be used with [StreamBuilder2]
 class StreamTuple2<T1, T2> {
-  // returns the first stream of the tuple
+  /// returns the first stream of the tuple
   final Stream<T1> stream1;
 
-  // returns the second stream of the tuple
+  /// returns the second stream of the tuple
   final Stream<T2> stream2;
 
   StreamTuple2(
@@ -17,10 +17,10 @@ class StreamTuple2<T1, T2> {
 
 /// Wrapper for 2 [AsyncSnapshot]s Intended to be used with [StreamBuilder2]
 class SnapshotTuple2<T1, T2> {
-  // returns the first snapshot of the tuple
+  /// returns the first snapshot of the tuple
   final AsyncSnapshot<T1> snapshot1;
 
-  // returns the second snapshot of the tuple
+  /// returns the second snapshot of the tuple
   final AsyncSnapshot<T2> snapshot2;
 
   SnapshotTuple2(
@@ -31,10 +31,10 @@ class SnapshotTuple2<T1, T2> {
 
 /// Wrapper for 2 `initialData` values for [StreamBuilder2]
 class InitialDataTuple2<T1, T2> {
-  // returns the first item of the tuple
+  /// returns the first item of the tuple
   final T1? data1;
 
-  // returns the second item of the tuple
+  /// returns the second item of the tuple
   final T2? data2;
 
   InitialDataTuple2([
@@ -53,8 +53,16 @@ typedef AsyncWidgetBuilder2<T1, T2> = Widget Function(
 /// in the form of a [StreamTuple2]. Can also accept multiple values for
 /// [initialData] using a [InitialDataTuple2].
 class StreamBuilder2<T1, T2> extends StatelessWidget {
+  /// Collection of streams for this widget to listen to.
+  /// New data in any stream triggers [builder] to rerun
   final StreamTuple2<T1, T2> streams;
+
+  /// A builder that gets passed multiple snapshots.
+  /// see [StreamBuilder.builder] for more info
   final AsyncWidgetBuilder2<T1, T2> builder;
+
+  /// Initial data for when the [streams] don't have any.
+  /// see [StreamBuilder.initialData] for more info
   final InitialDataTuple2<T1, T2>? initialData;
 
   const StreamBuilder2({
