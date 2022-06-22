@@ -4,7 +4,7 @@ version: 2.0.0
 homepage: https://github.com/glitchedmob/flutter_multiple_stream_builder
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.17.3 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -15,3 +15,4 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.0

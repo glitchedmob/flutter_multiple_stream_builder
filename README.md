@@ -10,7 +10,7 @@ dependencies:
 ```
 **Note:** this package depends on the [tuple](https://pub.dev/packages/tuple) package from pub.dev.
 The types from the tuple package are used to pass in arguments to the widgets in this package.
-However, this package exports the types from the tuple package, so you don't have to install it directly. 
+However, this package exports the types from the tuple package, so you don't have to install it directly.
 Installing the tuple package and using its types directly shouldn't cause any issues though.
 
 ## Usage example
