@@ -1,3 +1,10 @@
+## 3.0.0 - 2022/06/21
+
+- **Breaking Change**: Remove dependency on `tuple` and use custom types instead
+- **Breaking Change**: Rename `item1`, `item2`, etc. in builder snapshot to `snapshot1`, `snapshot2`, etc.
+- Add `StreamBuilder8` - `StreamBuilder15`
+- Add automated tests
+
 ## 2.0.0 - 2021/06/03
 
 - Migrate to null safety
