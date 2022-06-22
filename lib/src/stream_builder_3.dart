@@ -66,6 +66,11 @@ class StreamBuilder3<T1, T2, T3> extends StatelessWidget {
         streams.stream2,
         streams.stream3,
       ),
+      initialData: InitialDataTuple(
+        initialData?.data1,
+        initialData?.data2,
+        initialData?.data3,
+      ),
       builder: (context, snapshots) {
         return builder(
           context,

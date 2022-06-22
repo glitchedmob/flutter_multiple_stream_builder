@@ -118,6 +118,18 @@ class StreamBuilder10<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
         streams.stream9,
         streams.stream10,
       ),
+      initialData: InitialDataTuple(
+        initialData?.data1,
+        initialData?.data2,
+        initialData?.data3,
+        initialData?.data4,
+        initialData?.data5,
+        initialData?.data6,
+        initialData?.data7,
+        initialData?.data8,
+        initialData?.data9,
+        initialData?.data10,
+      ),
       builder: (context, snapshots) {
         return builder(
           context,
