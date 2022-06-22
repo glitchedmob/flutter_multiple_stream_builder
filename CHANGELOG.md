@@ -1,3 +1,8 @@
+## 3.0.2 - 2022/06/22
+
+- Add more dartdoc comments
+- Remove duplicate imports in `StreamBuilder14`
+
 ## 3.0.1 - 2022/06/22
 
 - Add better dartdoc comments to new types
