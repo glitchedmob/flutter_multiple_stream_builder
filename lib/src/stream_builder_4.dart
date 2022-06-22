@@ -1,10 +1,18 @@
 import 'package:flutter/widgets.dart';
 import 'package:multiple_stream_builder/src/multiple_stream_builder.dart';
 
+/// Wrapper for 4 [Stream]s. Intended to be used with [StreamBuilder4]
 class StreamTuple4<T1, T2, T3, T4> {
+  // returns the first stream of the tuple
   final Stream<T1> stream1;
+
+  // returns the second stream of the tuple
   final Stream<T2> stream2;
+
+  // returns the third stream of the tuple
   final Stream<T3> stream3;
+
+  // returns the fourth stream of the tuple
   final Stream<T4> stream4;
 
   StreamTuple4(
@@ -15,10 +23,18 @@ class StreamTuple4<T1, T2, T3, T4> {
   );
 }
 
+/// Wrapper for 4 [AsyncSnapshot]s Intended to be used with [StreamBuilder4]
 class SnapshotTuple4<T1, T2, T3, T4> {
+  // returns the first snapshot of the tuple
   final AsyncSnapshot<T1> snapshot1;
+
+  // returns the second snapshot of the tuple
   final AsyncSnapshot<T2> snapshot2;
+
+  // returns the third snapshot of the tuple
   final AsyncSnapshot<T3> snapshot3;
+
+  // returns the fourth snapshot of the tuple
   final AsyncSnapshot<T4> snapshot4;
 
   SnapshotTuple4(
@@ -29,10 +45,18 @@ class SnapshotTuple4<T1, T2, T3, T4> {
   );
 }
 
+/// Wrapper for 4 `initialData` values for [StreamBuilder4]
 class InitialDataTuple4<T1, T2, T3, T4> {
+  // returns the first item of the tuple
   final T1? data1;
+
+  // returns the second item of the tuple
   final T2? data2;
+
+  // returns the third item of the tuple
   final T3? data3;
+
+  // returns the fourth item of the tuple
   final T4? data4;
 
   InitialDataTuple4([
@@ -43,6 +67,7 @@ class InitialDataTuple4<T1, T2, T3, T4> {
   ]);
 }
 
+/// A variant of [AsyncWidgetBuilder] that uses [SnapshotTuple4]
 typedef AsyncWidgetBuilder4<T1, T2, T3, T4> = Widget Function(
   BuildContext context,
   SnapshotTuple4<T1, T2, T3, T4> snapshots,
